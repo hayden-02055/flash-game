@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake</title>
+    <link rel="stylesheet" href="style/styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <h1>Snake</h1>
+      <section class="hud" aria-live="polite">
+        <p>Score: <span id="score">0</span></p>
+        <p>Status: <span id="status">Running</span></p>
+      </section>
+
+      <section id="grid" class="grid" aria-label="Snake game board"></section>
+
+      <section class="actions">
+        <button id="pause-btn" type="button">Pause</button>
+        <button id="restart-btn" type="button">Restart</button>
+      </section>
+
+      <section class="controls" aria-label="Directional controls">
+        <button data-dir="UP" type="button">Up</button>
+        <div class="control-row">
+          <button data-dir="LEFT" type="button">Left</button>
+          <button data-dir="DOWN" type="button">Down</button>
+          <button data-dir="RIGHT" type="button">Right</button>
+        </div>
+      </section>
+
+      <p class="hint">Use Arrow keys or WASD. Space to pause, R to restart.</p>
+    </main>
+
+    <script type="module" src="src/main.mjs"></script>
+  </body>
+</html>

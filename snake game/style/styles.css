@@ -1,0 +1,91 @@
+:root {
+  --bg: #f4f4f4;
+  --panel: #ffffff;
+  --border: #222;
+  --snake: #2f7a2f;
+  --food: #cc3434;
+  --cell: #e6e6e6;
+  --text: #1a1a1a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.game-shell {
+  width: min(95vw, 520px);
+  margin: 1.5rem auto;
+  padding: 1rem;
+  background: var(--panel);
+  border: 2px solid var(--border);
+}
+
+h1 {
+  margin: 0 0 0.75rem;
+  font-size: 1.4rem;
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.hud p {
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 2px solid var(--border);
+  background: #fff;
+}
+
+.cell {
+  border: 1px solid #f1f1f1;
+  background: var(--cell);
+}
+
+.cell.snake {
+  background: var(--snake);
+}
+
+.cell.food {
+  background: var(--food);
+}
+
+.actions,
+.controls {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.control-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+button {
+  border: 1px solid var(--border);
+  background: #fff;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+}
+
+.hint {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
